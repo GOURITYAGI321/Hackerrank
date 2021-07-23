@@ -1,0 +1,17 @@
+int getNode(SinglyLinkedListNode* llist, int positionFromTail) {
+SinglyLinkedListNode *ptr=llist;
+       int count=0;
+       while(ptr!=NULL){
+           count++;
+           ptr=ptr->next;
+       }
+       ptr=llist;
+       count=count-1;
+       while(ptr!=NULL){
+           if(count==positionFromTail)
+            break;
+            ptr=ptr->next;
+            count=count-1;
+       }
+       return ptr->data;
+    }
